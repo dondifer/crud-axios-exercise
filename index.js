@@ -2,6 +2,7 @@ let users = [];
 const display = document.getElementById("nameDisplay");
 const displayImg = document.getElementById("imgeRand");
 const displayBreed = document.getElementById("imgBreed");
+const gitData = document.getElementById("gitData");
 axios
   .get("https://jsonplaceholder.typicode.com/users")
   .then((res) => {
@@ -47,6 +48,20 @@ function printHounds() {
       res.data.message.forEach((image) => {
         displayBreed.innerHTML += `<img width="200" height="200" src="${image}" />`;
       });
+    })
+    .catch((err) => {});
+}
+
+function printHounds() {
+  const inputValue = document.getElementById("userId");
+  axios
+    .get(`https://api.github.com/users/${inputValue.value}`)
+    .then((res) => {
+      console.log(res.data.avatar_url);
+      console.log(res.data.login);
+      console.log(res.data.public_repos);
+      gitData.innerHTML = "";
+      gitData.innerHTML = `<img width="200" height="200" src="${res.data.avatar_url}" /> <p><strong>${res.data.login}:</strong>Public repos:${res.data.public_repos}</p>`;
     })
     .catch((err) => {});
 }

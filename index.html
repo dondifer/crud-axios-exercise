@@ -9,11 +9,35 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <button id="showUsers" onclick="showUsersConsole()">SHOW USERS</button>
+    <button
+      style="margin-bottom: 1rem"
+      id="showUsers"
+      onclick="showUsersConsole()"
+    >
+      SHOW USERS
+    </button>
     <ul id="nameDisplay"></ul>
-    <button id="printImage" onclick="printRandom()">PRINT DOG</button>
+    <button style="margin-bottom: 1rem" id="printImage" onclick="printRandom()">
+      PRINT DOG
+    </button>
     <div id="imgeRand"></div>
-    <button id="printHounds" onclick="printHounds()">PRINT ONLY AKITAS</button>
+    <button
+      style="margin-bottom: 1rem"
+      id="printHounds"
+      onclick="printHounds()"
+    >
+      PRINT ONLY AKITAS
+    </button>
     <div id="imgBreed"></div>
+    <input
+      style="margin-bottom: 1rem"
+      type="text"
+      id="userId"
+      placeholder="Set your github username"
+    />
+    <button style="margin-bottom: 1rem" id="gitButton" onclick="printHounds()">
+      Take github data
+    </button>
+    <div id="gitData"></div>
   </body>
 </html>
