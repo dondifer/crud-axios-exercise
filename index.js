@@ -39,7 +39,7 @@ function printRandom() {
     .catch((err) => {});
 }
 
-function printHounds() {
+function printAkitas() {
   axios
     .get("https://dog.ceo/api/breed/akita/images")
     .then((res) => {
@@ -52,7 +52,7 @@ function printHounds() {
     .catch((err) => {});
 }
 
-function printHounds() {
+function printUser() {
   const inputValue = document.getElementById("userId");
   axios
     .get(`https://api.github.com/users/${inputValue.value}`)
